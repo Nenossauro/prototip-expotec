@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8" /> 
+        <link rel="stylesheet" type="text/css" href="static/css/style-form.css">
+        <link rel="stylesheet" type="text/css" href="static/css/global.css">
+        <title>Inserir livros</title>
+    </head>
+
+<body>
+
+<main>
+
+<nav>
+    <a id="cimae" href="inicio">Início</a>
+    <a id="cimae" href="form">Formulario</a>
+    
+    <a id="cimae" class="logout" href="/logout">Logout</a>
+
+
+</nav>
+
+<div class="caixaform">
+            
+        <form name="dados" method="POST" action="/inserir" id="main-form" enctype="multipart/form-data">
+            Está é a {{idp}}° entrada em nosso banco de dados!
+            <input type="text" id="input-form"required="" name="txtnome" size="30" maxlength="100" placeholder="Nome">
+            <input type="text" id="input-form"required="" name="txtgenero" size="30" maxlength="30" placeholder="Gênero">
+            <input type="text" id="input-form"required="" name="txtestado" size="30" maxlength="30" placeholder="Estado">
+            <input type="text" id="input-form"required="" name="txtidade" size="30" maxlength="30" placeholder="Idade">
+            <input class="button" type="submit" name="btnenviar" />
+           
+
+        </form>
+    </div>
+
+</main>
+
+    
+    
+    
+
+</body>
+
+
+</html>

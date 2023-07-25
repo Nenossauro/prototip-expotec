@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: "Consolas";
+    box-sizing: border-box;
+  }
+
+  :root{
+    --main-color: #ffa580;
+    --main-txt-color: black;
+    --main-txt-color-hover: white;
+    --main-boxshadow-color: #95a4ff;
+
+  }
+
+  body {
+    overflow: hidden;
+    height: 100vh; 
+    background: url('../backindex.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color: #ffe4c4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+  }
+
+  main {
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  #cimae{
+    text-align: center;
+    cursor: pointer;
+    padding-left: auto;
+    width: 50%;
+    background: var(--main-color);
+  }
+
+  nav {
+    justify-self: center;
+    align-self: center;
+    line-height: 28pt;
+    background: var(--main-color);
+    letter-spacing: 2px;
+    transition: 0.2s all ease-in-out;
+    border: 1px solid black;
+    box-shadow: 3px 3px 1px 1px var(--main-boxshadow-color), 3px 3px 1px 2px black;
+    width: 70%;
+    margin-bottom: 20px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 28pt;
+    margin-bottom: 28pt;
+    border: none;
+    border-bottom: 5px solid black;
+    background: #f8f4e5;
+    min-width: 250px;
+    padding-left: 5px;
+    outline: none;
+    color: black;
+  }
+
+  input:focus {
+    border-bottom: 5px solid var(--main-color);
+  }
+
+  .button,
+  button,
+  #cimae,
+  #cimar
+  {
+    transition: all, ease-in-out, 0.2s;
+  }
+
+  .button:hover a,
+  .button:hover,
+  button:hover,
+  button:hover a,
+  #cimae:hover,
+  #cimae:hover a,
+  #cimar:hover,
+  #cimar:hover a{
+
+    background: black;
+    color: var(--main-txt-color-hover);
+
+  }
+
+  ::selection {
+    background: #000000;
+    color: var(--main-txt-color-hover)
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    border-bottom: 5px solid var(--main-boxshadow-color);
+    -webkit-text-fill-color: #2A293E;
+    -webkit-box-shadow: 0 0 0px 1000px #f8f4e5 inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  center, p{
+  margin-top: 1rem;
+  }
+
+  button,
+  .button {
+    align-items: center;
+    display: block;
+    margin: 0 auto;
+    line-height: 28pt;
+    padding: 0 20px;
+    background: var(--main-color);
+    letter-spacing: 2px;
+    transition: 0.2s all ease-in-out;
+    outline: none;
+    border: 1px solid black;
+    box-shadow: 3px 3px 1px 1px var(--main-boxshadow-color), 3px 3px 1px 2px black;
+    width: fit-content;
+    cursor: pointer;
+  }
+  
+  a{
+    transition: all, ease-in-out, 0.2s;
+    height: 100%;
+    width: 100%;
+    color: var(--main-txt-color);
+    text-decoration: none;
+  } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

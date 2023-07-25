@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" /> 
+    <link rel="stylesheet" type="text/css" href="static/css/style-login.css">
+    <link rel="stylesheet" type="text/css" href="static/css/global.css">
+    <title>Login</title>
+</head>
+
+<body>
+    {% with messages = get_flashed_messages() %}
+            {% if messages %} 
+                <ul id="messages" class="list-unstyled">
+                {% for message in messages %}
+                    <li class="alert alert-success">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %} 
+    <div class = "area-login">
+    <div class = "login">
+        <form action="/autenticar" method="POST">
+            <h2>Já é um usuário? Faça login!</h2>
+            <h3>E-mail</h3>
+            <input type ="text" required="true" name="nome" placeholder="Digite seu e-mail" autofocus>
+            <h3>Senha</h3>
+            <input type ="password" required="true" name="senha" placeholder="Digite sua senha"><br>
+            <input type ="submit" value ="ENTRAR" name="logar">
+        </form>
+        </div>
+    <div class="registro">
+    <form name="registro" method="POST" action="/criar" id="main-form" enctype="multipart/form-data">
+        <h2>Ainda não tem uma conta? Cadastre-se!</h2>
+        <h3>Nome de Usuario</h3>
+        <input type ="text" required="true" name="userr" placeholder="Digite seu nome de usuario" autofocus>
+        <h3>E-mail</h3>
+        <input type ="text" required="true" name="nomer" placeholder="Digite seu e-mail" autofocus>
+        <h3>Senha</h3>
+        <input type ="password" required="true" name="senhar" placeholder="Digite sua senha"><br>
+        <h3>Foto de perfil</h3>
+        <input type="file" id="input-form" name="img" accept="image/x-png,image/jpeg">
+        <input type ="submit" value ="CADASTRAR" name="registrar">
+    </form>
+    </div>
+
+
+        
+</body>
+</html>
+
