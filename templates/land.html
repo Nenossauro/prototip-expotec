@@ -8,6 +8,9 @@
     <title>Protótipo</title>
     <link rel="stylesheet" href="static/css/global.css">
     <link rel="stylesheet" href="static/css/style-index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 <nav>
 <a id="cimae" href="inicio">Início</a>
@@ -21,17 +24,18 @@
     <div class="div1">
         <h3><center>Biblioteca Virtual</h3> </center> 
         <div class="samuel">
-            {% block grafico_altair %}
-                {{ grafico_altair | safe }}
-            {% endblock %}
-
-
-           
-            
-        </div>
-
-        
+            <div class="idade" id="grafico-idade"></div>
+            <div class="genero" id="grafico-genero"></div>   
+        </div>       
     </div>
-      
+    <script>
+         // Obter as visualizações JSON dos gráficos do Flask
+         var graficoIdadeJSON = {{ grafico_altair | safe }};
+        var graficoGeneroJSON = {{ grafico_altair_genero | safe }};
+
+        // Renderizar os gráficos usando Vega-Embed
+        vegaEmbed('#grafico-idade', graficoIdadeJSON).catch(console.error);
+        vegaEmbed('#grafico-genero', graficoGeneroJSON).catch(console.error);
+    </script>  
 </body>
 </html>

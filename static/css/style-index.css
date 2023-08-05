@@ -7,9 +7,18 @@
     box-shadow: 15px 15px 1px 	#95a4ff , 15px 15px 1px 2px black;
   }
   .samuel{
-    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 70%;
     font-size: 1rem;
     text-align: justify;
+    
     padding:2rem;
+  }
+  .idade,.genero{
+    justify-self: center;
+    align-self: center;
+    height: min-content;
+    width: min-content;
   }
